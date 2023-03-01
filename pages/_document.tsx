@@ -15,7 +15,6 @@ export default function RootDocument() {
             <Head>
                 <meta name="robots" content="follow, index"/>
                 <meta name="description" content={meta.description}/>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:site_name" content={meta.title}/>
                 <meta property="og:description" content={meta.description}/>
