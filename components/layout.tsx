@@ -3,9 +3,9 @@ import {NavBar, Return} from "@/components/nav";
 export function SubLayout({children, title}: {children: React.ReactNode, title?: string | null}) {
     return (
         <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 50, opacity: 0 }}
+            initial={{ transform: "scale(1.2)", opacity: 0 }}
+            animate={{ transform: "scale(1)", opacity: 1 }}
+            exit={{ transform: "scale(1.2)", opacity: 0 }}
             transition={{
                 type: "spring",
                 stiffness: 320,

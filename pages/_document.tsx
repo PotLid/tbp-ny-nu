@@ -8,7 +8,10 @@ export default function RootDocument() {
     }
 
     return (
-        <Html lang="en">
+        <Html
+            lang="en"
+            className="text-black bg-white dark:text-white dark:bg-[#111010]"
+        >
             <Head/>
             <body>
             <Main/>
