@@ -1,11 +1,8 @@
 import {SubLayout} from "@/components/layout";
 import Close from "@/components/Close";
-import Image from "next/image";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
-
-import samplePic from "@/static/images/ny_nu.jpeg"
 
 function Profile({title, name, major, linkedIn}:{title?: string, name?: string, major?:string, linkedIn?: string}) {
     return(
@@ -25,13 +22,6 @@ export default function About() {
             <section className="layout-section">
                 <article className="layout-article">
                     <h2 className="major heading-article">E-Board Members</h2>
-                    {/*<span className="image-article-wrap">*/}
-                    {/*    <Image*/}
-                    {/*        className="image-article" src={samplePic} alt=""*/}
-                    {/*        placeholder="blur"*/}
-                    {/*        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"*/}
-                    {/*    />*/}
-                    {/*</span>*/}
                     <Profile
                         title="President"
                         name="Maxine Dupuis"
