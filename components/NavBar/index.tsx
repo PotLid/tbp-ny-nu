@@ -1,22 +1,21 @@
 import Link from "next/link";
-import styles from './styles.module.css'
 
 export function NavBar({}) {
 
     return (
         <nav className="landing-line-vertical">
-            <ul className={styles["landing-nav-ul"]}>
+            <ul className="landing-nav-ul">
                 <li>
-                    <Link className={styles["landing-nav-link"]} href="/tbp">UB SEAS</Link>
+                    <Link className="landing-nav-link" href="/tbp">UB SEAS</Link>
                 </li>
-                <li className={styles["landing-nav-li"]}>
-                    <Link className={styles["landing-nav-link"]} href="/chapter">Chapter</Link>
+                <li className="landing-nav-li">
+                    <Link className="landing-nav-link" href="/chapter">Chapter</Link>
                 </li>
-                <li className={styles["landing-nav-li"]}>
-                    <Link className={styles["landing-nav-link"]} href="/about">E-Board</Link>
+                <li className="landing-nav-li">
+                    <Link className="landing-nav-link" href="/about">E-Board</Link>
                 </li>
-                <li className={styles["landing-nav-li"]}>
-                    <Link className={styles["landing-nav-link"]} href="/contact">Contact</Link>
+                <li className="landing-nav-li">
+                    <Link className="landing-nav-link" href="/contact">Contact</Link>
                 </li>
             </ul>
         </nav>

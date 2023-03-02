@@ -2,16 +2,6 @@ import Head from "next/head";
 import {motion} from 'framer-motion'
 import {title as metaTitle} from "@/lib/info";
 
-
-export function Article({children}:{children: React.ReactNode}) {
-
-    return (
-        <div>
-            {children}
-        </div>
-    )
-}
-
 function Frame({children, className}:{children: React.ReactNode | null, className?: string}){
     return (
         <div className={`antialiased px-8 py-12 z-10 min-h-screen w-full h-full relative flex flex-col items-center ${className}`}>

@@ -158,6 +158,37 @@
      background-color: rgba(255,255,255,0.075)
     }
 
+    /* Bug on Production if use module.css */
+    .landing-nav-ul {
+        display: flex;
+        margin-bottom: 0;
+        list-style: none;
+        padding-left: 0;
+        border: solid 1px #fff;
+        border-radius: 4px;
+    }
+
+    .landing-nav-li {
+        border-left-width: 1px;
+        border-color: white;
+    }
+
+    .landing-nav-link {
+        display: block;
+        min-width: 7.5rem;
+        height: 2.75rem;
+        line-height: 2.75rem;
+        padding: 0 1.25rem 0 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-size: 0.8rem;
+        transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
+    }
+
+    .landing-nav-link:hover {
+        background-color: rgba(255,255,255,0.075);
+    }
+
     @media only screen and (max-width: 736px) {
         .landing-line-vertical {
             margin-top: 2rem;
@@ -248,6 +279,17 @@
 
         .image-article {
 
+        }
+        /* Bug on production if use module.css */
+        .landing-nav-ul {
+            flex-direction: column;
+            min-width: 10rem;
+            max-width: 100%;
+        }
+
+        .landing-nav-li {
+            border-left: 0;
+            border-top: solid 1px #fff;
         }
     }
 
