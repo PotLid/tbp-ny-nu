@@ -19,13 +19,10 @@ export default function TBP() {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                         <p className="text-xs text-right mx-0 mb-0 mt-2">
-                            Photos of North and South Campus in the Summer | &copy; 2014&nbsp;
-                            <a className="custom-anchor"
+                            Photos of North and South Campus in the Summer | &copy; 2014&nbsp;<a className="custom-anchor"
                                rel="noreferrer noopener"
                                target="_blank"
-                               href="https://www.linkedin.com/in/arielnam/">
-                                Ariel Namoca
-                            </a>
+                               href="https://www.linkedin.com/in/arielnam/">Ariel Namoca</a>
                     </p>
                     </span>
                     <p className="mx-0 mb-10 mt-0">
