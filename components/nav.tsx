@@ -1,13 +1,24 @@
 import Link from "next/link";
+import {globalClass, linkClass} from "@/styles/styles";
 
 export function NavBar({}){
 
     return (
-        <nav>
-            <Link href="/tbp">TBP</Link>
-            <Link href="/chapter">Chapter</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+        <nav className={`${globalClass}`}>
+            <ul className="flex border border-white/100 rounded">
+                <li>
+                    <Link className={linkClass} href="/tbp">TBP</Link>
+                </li>
+                <li className="border-l">
+                    <Link className={linkClass} href="/chapter">Chapter</Link>
+                </li>
+                <li className="border-l">
+                    <Link className={linkClass} href="/about">About</Link>
+                </li>
+                <li className="border-l">
+                    <Link className={linkClass} href="/contact">Contact</Link>
+                </li>
+            </ul>
         </nav>
     )
 }
