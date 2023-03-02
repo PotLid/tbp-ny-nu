@@ -31,7 +31,7 @@ export default function About() {
                     <Profile
                         title="Vice President"
                         name="Arthur Tanchoco Jr."
-                        major="Aerospace and Mechanical Engineer"
+                        major="Aerospace and Mechanical Engineering"
                         linkedIn="https://www.linkedin.com/in/arthur-tanchoco-jr-078697202/"
                     />
                     <Profile
