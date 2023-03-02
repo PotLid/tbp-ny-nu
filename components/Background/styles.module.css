@@ -34,7 +34,7 @@
     transition: -webkit-transform .325s ease-in-out, -webkit-filter .325s ease-in-out;
     transition: transform .325s ease-in-out, filter .325s ease-in-out;
     transition: transform .325s ease-in-out, filter .325s ease-in-out, -webkit-transform .325s ease-in-out, -webkit-filter .325s ease-in-out;
-    background-image: url('./bg_ub.jpeg');
+    background-image: url('./bg_ub_compressed.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
