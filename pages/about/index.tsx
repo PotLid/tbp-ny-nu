@@ -2,12 +2,15 @@ import {SubLayout} from "@/components/layout";
 import Close from "@/components/Close";
 import Image from "next/image";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
+
 import samplePic from "@/static/images/ny_nu.jpeg"
 
 function Profile({title, name, major, linkedIn}:{title?: string, name?: string, major?:string, linkedIn?: string}) {
     return(
         <>
-            <h2 className="sub-heading-article">{title} | </h2>
+            <h2 className="sub-heading-article">{title} | <a href={linkedIn} rel="noreferrer noopener" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></h2>
             <p className="mx-0 mb-4 mt-0 p-article">
                 {name} - {major}
             </p>

@@ -7,7 +7,7 @@ export function NavBar({}) {
         <nav className="landing-line-vertical">
             <ul className={styles["landing-nav-ul"]}>
                 <li>
-                    <Link className={styles["landing-nav-link"]} href="/tbp">TBP</Link>
+                    <Link className={styles["landing-nav-link"]} href="/tbp">UB SEAS</Link>
                 </li>
                 <li className={styles["landing-nav-li"]}>
                     <Link className={styles["landing-nav-link"]} href="/chapter">Chapter</Link>
