@@ -291,6 +291,13 @@
             border-left: 0;
             border-top: solid 1px #fff;
         }
+
+        .landing-nav-link {
+            height: 3rem;
+            line-height: 3rem;
+            min-width: 0;
+            width: 100%;
+        }
     }
 
 }
