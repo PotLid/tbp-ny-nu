@@ -10,7 +10,7 @@ export default function RootDocument() {
     return (
         <Html
             lang="en"
-            className="text-white bg-black"
+            className="text-white bg-black min-h-full flex flex-col grow"
         >
             <Head>
                 <meta name="robots" content="follow, index"/>
@@ -21,7 +21,7 @@ export default function RootDocument() {
                 <meta property="og:title" content={meta.title}/>
                 <meta property="og:image" content={meta.image}/>
             </Head>
-            <body>
+            <body >
             <Main/>
             <NextScript/>
             </body>
