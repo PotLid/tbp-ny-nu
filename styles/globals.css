@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body {
+@layer utilities {
+    .custom-anchor {
+        border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
+        transition: color .2s ease-in-out, background-color .2s ease-in-out, border-bottom-color .2s ease-in-out;
+    }
+
+    .custom-anchor:hover {
+        border-color: transparent;
+    }
+    .landing-line-vertical {
+        position: relative;
+        margin-top: 3.5rem;
+    }
+    .landing-line-vertical:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(-3.5rem - 1px);
+        left: calc(50% - 1px);
+        width: 1px;
+        height: calc(3.5rem + 1px);
+        background: #fff;
+    }
+
+    .landing-nav-link {
+        display: block;
+        min-width: 7.5rem;
+        height: 2.75rem;
+        line-height: 2.75rem;
+        padding: 0 1.25rem 0 1.45rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        font-size: 0.8rem;
+    }
+
+}
+
+html, body {
     min-width: 320px;
 }

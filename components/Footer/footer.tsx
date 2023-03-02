@@ -1,5 +1,3 @@
-import {anchorClass} from "@/styles/styles";
-
 export default function Footer({}) {
 
     return(
@@ -7,7 +5,7 @@ export default function Footer({}) {
             <p className="tracking-[.2rem] text-[.6rem] opacity-75 uppercase">
                 &copy; TBP NY NU. Design:
                 <a
-                    className={anchorClass}
+                    className="custom-anchor"
                     href="https://potlid.dev"
                     target="_blank"
                     rel="noopener noreferrer"

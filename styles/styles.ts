@@ -1,3 +1,0 @@
-export const anchorClass: string = "border-b border-b-white/50 border-dotted transition duration-200 ease-in-out hover:border-b-transparent"
-export const globalClass: string = "relative mt-[3.5rem] before:content-[''] before:block before:absolute before:top-[calc(-3.5rem_-_1px)] before:left-[calc(50%_-_1px)] before:w-px before:h-[calc(3.5rem_+_1px)] before:bg-white"
-export const linkClass: string = "block text-center min-w-[7.5rem] h-[2.75rem] leading-[2.75rem] py-0 pr-5 pl-[1.45rem] uppercase tracking-[.2rem] text-[.8rem] transition duration-200 ease-in-out hover:bg-[rgba(255,255,255,0.075)]"
