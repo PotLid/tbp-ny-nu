@@ -5,6 +5,7 @@ export default function RootDocument() {
         title: 'Tau Beta Pi - New York Nu Chapter',
         description: 'Tau Beta Pi - New York Nu Chapter Website.',
         image: 'https://www.buffalo.edu/content/www/brand/identity/university-logo-and-marks/jcr:content/par/image_0.img.219.auto.png/1459284839259.png',
+        keywords: ''
     }
 
     return (
@@ -14,6 +15,7 @@ export default function RootDocument() {
         >
             <Head>
                 <meta name="robots" content="follow, index"/>
+                <meta charSet="UTF-8" />
                 <meta name="description" content={meta.description}/>
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:site_name" content={meta.title}/>
