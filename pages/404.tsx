@@ -7,7 +7,7 @@ export default function Custom404({}) {
             <section className="layout-section">
                 <article className="layout-article">
                     <h2 className="major heading-article">404 | Not Found</h2>
-                    <p className="mx-0 mb-4 mt-0">
+                    <p className="mx-0 mb-10 mt-0">
                         This page could not be found.
                     </p>
                 </article>
