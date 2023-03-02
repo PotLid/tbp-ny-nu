@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHouse} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedinIn, faTwitter, faFacebook} from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
-import samplePic from "@/static/images/davis.jpg";
+import samplePic from "@/static/images/davis_compressed.jpg";
 
 export default function TBP() {
     return (
@@ -18,9 +18,20 @@ export default function TBP() {
                             placeholder="blur"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
+                        <p className="text-xs text-right mx-0 mb-0 mt-2">
+                            Photos of North and South Campus in the Summer | © 2014
+                            <a className="custom-anchor"
+                               rel="noreferrer noopener"
+                               target="_blank"
+                               href="https://www.linkedin.com/in/arielnam/">
+                                Ariel Namoca
+                            </a>
+                    </p>
                     </span>
                     <p className="mx-0 mb-10 mt-0">
-                        Welcome to the School of Engineering and Applied Sciences at the University at Buffalo. We provide an inclusive environment that supports big thinking, creative freedom, and vast possibilities for achievement.
+                        Welcome to the School of Engineering and Applied Sciences at the University at Buffalo. We
+                        provide an inclusive environment that supports big thinking, creative freedom, and vast
+                        possibilities for achievement.
                     </p>
                     <ul className="icons">
                         <li className="icons-list icons-list-first">
@@ -57,7 +68,7 @@ export default function TBP() {
                         </li>
                     </ul>
                 </article>
-                <Close />
+                <Close/>
             </section>
         </SubLayout>
     )
