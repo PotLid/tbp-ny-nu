@@ -248,6 +248,10 @@
     }
 
     @media only screen and (max-width: 480px) {
+        .landing-gradient {
+            background-position-y: -2.5rem;
+        }
+
         .layout-article {
             padding: 3rem 1.5rem .5rem 1.5rem;
         }
