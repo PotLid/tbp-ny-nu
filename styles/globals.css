@@ -35,10 +35,23 @@
         text-transform: uppercase;
         letter-spacing: .2rem;
         font-size: 0.8rem;
+        transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
+    }
+
+    .landing-nav-link:hover {
+        background-color: rgba(255,255,255,0.075);
     }
 
 }
 
 html, body {
     min-width: 320px;
+}
+
+body, input, select, textarea {
+    color: #fff;
+    font-family: "Source Sans Pro",sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.65;
 }

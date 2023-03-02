@@ -21,8 +21,8 @@ export default function Home() {
                             TBP New York Nu
                         </h1>
                         <p className="text-[.8rem] leading-[2] tracking-[.2rem]">
-                            A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-                            for free under the <a href="https://html5up.net/license">Creative Commons</a> license.
+                            Welcome to Tau Beta Pi New York Nu Chapter Website<br />
+                            Learn more about <a className="custom-anchor" href="https://html5up.net">Tau Beta Pi</a>
                         </p>
                     </div>
                 </div>
