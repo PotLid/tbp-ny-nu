@@ -18,7 +18,7 @@ export default function Home() {
                 <div className={`max-w-full border-solid border-white border-y ${globalClass}`}>
                     <div className="px-12 py-8 max-h-[40rem] overflow-hidden">
                         <h1 className="text-4xl font-semibold mb-4 leading-[1.3] tracking-[.5rem] uppercase">
-                            Dimension
+                            TBP New York Nu
                         </h1>
                         <p className="text-[.8rem] leading-[2] tracking-[.2rem]">
                             A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
