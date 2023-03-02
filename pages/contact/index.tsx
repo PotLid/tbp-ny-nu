@@ -1,10 +1,10 @@
 import {SubLayout} from "@/components/layout";
 import Close from "@/components/Close";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faLinkedin, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import {faLinkedinIn, faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact() {
-    return(
+    return (
         <SubLayout title="Contact" className="relative z-10">
             <section className="layout-section">
                 <article className="layout-article">
@@ -14,15 +14,24 @@ export default function Contact() {
                     </p>
 
                     <ul className="icons">
-                        <li><a href="https://www.linkedin.com/groups/12653877/" rel="noreferrer noopener" target="_blank">
-                            <FontAwesomeIcon icon={faLinkedin} />
-                        </a></li>
-                        <li><a href="" rel="noreferrer noopener" target="_blank">
-                            <FontAwesomeIcon icon={faInstagram} />
-                        </a></li>
+                        <li className="icons-list icons-list-first">
+                            <a
+                                className="icons-anchor"
+                                href="https://www.linkedin.com/groups/12653877/" rel="noreferrer noopener"
+                               target="_blank">
+                                <FontAwesomeIcon icon={faLinkedinIn}/>
+                            </a>
+                        </li>
+                        <li className="icons-list">
+                            <a
+                                className="icons-anchor"
+                                href="/" rel="noreferrer noopener" target="_blank">
+                                <FontAwesomeIcon icon={faInstagram}/>
+                            </a>
+                        </li>
                     </ul>
                 </article>
-                <Close />
+                <Close/>
             </section>
         </SubLayout>
 

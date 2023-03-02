@@ -128,6 +128,36 @@
         border-radius: 4px;
     }
 
+    .icons {
+        cursor: default;
+        list-style: none;
+        margin: 0 0 2rem 0;
+    }
+
+    .icons-list-first{
+        padding-right: 0;
+    }
+
+    .icons-list {
+        display: inline-block;
+        padding: 0 0.75em 0 0;
+    }
+
+    .icons-anchor {
+        transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
+        border-radius: 100%;
+        box-shadow: inset 0 0 0 1px white;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .icons-anchor:hover {
+     background-color: rgba(255,255,255,0.075)
+    }
+
     @media only screen and (max-width: 736px) {
         .landing-line-vertical {
             margin-top: 2rem;
