@@ -28,9 +28,9 @@ export function SubLayout({children, title, className}: {children: React.ReactNo
             </Head>
             <motion.div
                 className={className}
-                initial={{ transform: "translateY(.25rem)", opacity: 0 }}
+                initial={{ transform: "translateY(.75rem)", opacity: 0 }}
                 animate={{ transform: "translateY(0)", opacity: 1 }}
-                exit={{ transform: "translateY(.25rem)", opacity: 0 }}
+                exit={{ transform: "translateY(.75rem)", opacity: 0 }}
                 transition={{
                     type: "ease-in-out",
                     duration: .325,

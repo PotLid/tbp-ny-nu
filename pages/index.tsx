@@ -1,6 +1,7 @@
 import {MainLayout} from "@/components/layout";
-import {NavBar} from "@/components/nav";
+import {NavBar} from "@/components/NavBar";
 import Footer from "@/components/Footer/footer";
+
 
 import Image from "next/image";
 
@@ -15,11 +16,11 @@ export default function Home( {isLoaded} : {isLoaded?: boolean} ) {
                 </div>
                 <div className="max-w-full border-solid border-white border-y landing-line-vertical">
                     <div className={`px-12 py-8 max-h-[40rem] overflow-hidden landing-inner ${isLoaded ? "" : "landing-inner-init"}`}>
-                        <h1 className="text-4xl font-semibold mb-4 leading-[1.3] tracking-[.5rem] uppercase">
-                            TBP New York Nu
+                        <h1 className="landing-header">
+                            TBP NY Nu
                         </h1>
-                        <p className="text-[.8rem] leading-[2] tracking-[.2rem]">
-                            Welcome to Tau Beta Pi New York Nu Chapter<br />
+                        <p className="landing-desc">
+                            Welcome to the Tau Beta Pi New York Nu Chapter<br />
                             Learn more about <a className="custom-anchor" rel="noopener noreferrer" target="_blank" href="https://www.tbp.org/home.cfm">Tau Beta Pi</a>
                         </p>
                     </div>

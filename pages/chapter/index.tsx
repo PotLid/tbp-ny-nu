@@ -1,12 +1,14 @@
 import {SubLayout} from "@/components/layout";
-import {Return} from "@/components/nav";
+import Close from "@/components/Close";
 
 export default function Chapter() {
     return (
         <SubLayout title="Chapter" className="relative z-10">
             <section className="layout-section">
-                Chapter
-                <Return />
+                <article className="layout-article">
+
+                </article>
+                <Close />
             </section>
         </SubLayout>
 
