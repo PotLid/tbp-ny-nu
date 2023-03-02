@@ -4,10 +4,10 @@ import {Return} from "@/components/nav";
 export default function TBP() {
     return (
         <SubLayout className="relative z-10">
-            <div>
+            <section className="layout-section">
                 TBP
                 <Return />
-            </div>
+            </section>
         </SubLayout>
     )
 }

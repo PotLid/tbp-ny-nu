@@ -1,7 +1,9 @@
 import {FunctionComponent} from "react";
 
 type BackgroundProps = {
-    isMain: boolean
+    isMain: boolean,
+    className?: string | null,
+    isLoaded?: boolean,
 }
 
 export type BackgroundComponent = FunctionComponent<BackgroundProps>

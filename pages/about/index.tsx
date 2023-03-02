@@ -5,10 +5,12 @@ export default function About() {
 
     return (
         <SubLayout title="About" className="relative z-10">
-            <div>
-                About
+            <section className="layout-section">
+                <article className="layout-article">
+
+                </article>
                 <Return />
-            </div>
+            </section>
         </SubLayout>
     )
 }

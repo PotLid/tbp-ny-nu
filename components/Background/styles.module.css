@@ -20,6 +20,7 @@
 }
 
 .background:before {
+    transition: background-color .325s ease-in-out;
     background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url('./overlay.png');
     background-size: auto, 256px 256px;
     background-position: center, center;
@@ -30,9 +31,9 @@
 .background:after {
     -webkit-transform: scale(1.125);
     transform: scale(1.125);
-    transition: -webkit-transform .325s ease-in-out,-webkit-filter .325s ease-in-out;
-    transition: transform .325s ease-in-out,filter .325s ease-in-out;
-    transition: transform .325s ease-in-out,filter .325s ease-in-out,-webkit-transform .325s ease-in-out,-webkit-filter .325s ease-in-out;
+    transition: -webkit-transform .325s ease-in-out, -webkit-filter .325s ease-in-out;
+    transition: transform .325s ease-in-out, filter .325s ease-in-out;
+    transition: transform .325s ease-in-out, filter .325s ease-in-out, -webkit-transform .325s ease-in-out, -webkit-filter .325s ease-in-out;
     background-image: url('./bg_ub.jpeg');
     background-position: center;
     background-size: cover;
@@ -47,4 +48,8 @@
     -webkit-filter: blur(0.2rem);
     -ms-filter: blur(0.2rem);
     filter: blur(0.2rem);
+}
+
+.bg-loading:before {
+    background-color: black;
 }

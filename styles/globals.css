@@ -11,6 +11,7 @@
     .custom-anchor:hover {
         border-color: transparent;
     }
+
     .landing-line-vertical {
         position: relative;
         margin-top: 3.5rem;
@@ -40,6 +41,36 @@
 
     .landing-nav-link:hover {
         background-color: rgba(255,255,255,0.075);
+    }
+
+    .landing-inner {
+        transition: max-height .75s ease,padding .75s ease,opacity .325s ease-in-out;
+        transition-delay: 0.25s;
+    }
+
+    .landing-inner-init {
+        opacity: 0;
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .layout-section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        max-width: 100%;
+    }
+
+    .layout-article {
+        padding: 4.5rem 2.5rem 1.5rem 2.5rem;
+        position: relative;
+        width: 40rem;
+        max-width: 100%;
+        background-color: rgba(27,31,34,0.85);
+        border-radius: 4px;
     }
 
 }

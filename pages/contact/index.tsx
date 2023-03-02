@@ -4,10 +4,10 @@ import {Return} from "@/components/nav";
 export default function Contact() {
     return(
         <SubLayout title="Contact" className="relative z-10">
-            <div>
+            <section className="layout-section">
                 Contact
                 <Return />
-            </div>
+            </section>
         </SubLayout>
 
     )

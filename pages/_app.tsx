@@ -3,18 +3,29 @@ import type {AppProps} from 'next/app'
 import {AnimatePresence} from "framer-motion";
 import {Background} from "@/components/Background";
 import Head from "next/head";
+import {useEffect, useState} from "react";
 
 export default function App({Component, pageProps, router}: AppProps) {
+    const [isLoaded, setLoaded] = useState(false);
+
+    useEffect(()=>{
+        setLoaded(true);
+    }, [])
+
+
     return (
         <>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
             <main>
-                <AnimatePresence mode="wait" initial={true}>
-                    <Component {...pageProps} key={router.asPath}/>
+                <AnimatePresence
+                    mode="wait"
+                    initial={true}
+                >
+                    <Component {...pageProps} isLoaded={isLoaded} key={router.asPath}/>
                 </AnimatePresence>
-                <Background isMain={router.asPath === "/"}/>
+                <Background isLoaded={isLoaded} isMain={router.asPath === "/"}/>
             </main>
         </>
 

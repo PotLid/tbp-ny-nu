@@ -4,10 +4,10 @@ import {Return} from "@/components/nav";
 export default function Chapter() {
     return (
         <SubLayout title="Chapter" className="relative z-10">
-            <div>
+            <section className="layout-section">
                 Chapter
                 <Return />
-            </div>
+            </section>
         </SubLayout>
 
     )
