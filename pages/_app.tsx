@@ -29,7 +29,7 @@ export default function App({Component, pageProps, router}: AppProps) {
                 >
                     <Component {...pageProps} isLoaded={isLoaded} key={router.asPath}/>
                 </AnimatePresence>
-                <Background isLoaded={isLoaded} isMain={router.asPath === "/"}/>
+                <Background isMain={router.asPath === "/"}/>
             </main>
         </>
 
