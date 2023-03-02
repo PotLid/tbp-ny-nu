@@ -2,6 +2,7 @@ import {SubLayout} from "@/components/layout";
 import Close from "@/components/Close";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedinIn, faInstagram} from "@fortawesome/free-brands-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
     return (
@@ -9,8 +10,8 @@ export default function Contact() {
             <section className="layout-section">
                 <article className="layout-article">
                     <h2 className="major heading-article">Contact</h2>
-                    <p className="mx-0 mb-4 mt-0">
-                        The New York Nu Chapter was founded in 1967 and has a total of 3,713 members.
+                    <p className="mx-0 mb-10 mt-0">
+                        We&#39;re here to help you.
                     </p>
 
                     <ul className="icons">
@@ -25,8 +26,8 @@ export default function Contact() {
                         <li className="icons-list">
                             <a
                                 className="icons-anchor"
-                                href="/" rel="noreferrer noopener" target="_blank">
-                                <FontAwesomeIcon icon={faInstagram}/>
+                                href="mailto:maxinedu@buffalo.edu?subject=Mail from TBP - NY Nu " rel="noreferrer noopener" target="_blank">
+                                <FontAwesomeIcon icon={faEnvelope}/>
                             </a>
                         </li>
                     </ul>

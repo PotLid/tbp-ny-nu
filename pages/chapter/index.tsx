@@ -2,7 +2,7 @@ import {SubLayout} from "@/components/layout";
 import Close from "@/components/Close";
 import Image from "next/image";
 
-import samplePic from "@/static/images/ny_nu3.jpeg";
+import samplePic from "@/static/images/ny_nu.jpeg";
 
 export default function Chapter() {
     return (

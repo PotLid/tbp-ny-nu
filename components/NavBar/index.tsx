@@ -13,7 +13,7 @@ export function NavBar({}) {
                     <Link className={styles["landing-nav-link"]} href="/chapter">Chapter</Link>
                 </li>
                 <li className={styles["landing-nav-li"]}>
-                    <Link className={styles["landing-nav-link"]} href="/about">About</Link>
+                    <Link className={styles["landing-nav-link"]} href="/about">E-Board</Link>
                 </li>
                 <li className={styles["landing-nav-li"]}>
                     <Link className={styles["landing-nav-link"]} href="/contact">Contact</Link>
