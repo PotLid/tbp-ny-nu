@@ -21,7 +21,7 @@ export default function Home( {isLoaded} : {isLoaded?: boolean} ) {
                         </h1>
                         <p className="landing-desc">
                             Welcome to the Tau Beta Pi New York Nu Chapter<br />
-                            Learn more about <a className="custom-anchor" rel="noopener noreferrer" target="_blank" href="https://www.tbp.org">Tau Beta Pi</a>
+                            Learn more about TBP <a className="custom-anchor" rel="noopener noreferrer" target="_blank" href="https://www.tbp.org">Here</a>
                         </p>
                     </div>
                 </div>
