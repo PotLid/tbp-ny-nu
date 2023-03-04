@@ -7,12 +7,10 @@ export default function RootDocument() {
         image: 'https://www.buffalo.edu/content/www/brand/identity/university-logo-and-marks/jcr:content/par/image_0.img.219.auto.png/1459284839259.png',
     }
 
-    // const screenFill: string = "min-h-full flex flex-col grow"
-
     return (
         <Html
             lang="en"
-            className="text-white bg-black"
+            className="text-white bg-black min-h-full flex flex-col grow"
         >
             <Head>
                 <meta name="robots" content="follow, index"/>

@@ -8,16 +8,12 @@ import {AnimatePresence} from "framer-motion";
 import {Background} from "@/components/Background";
 import Head from "next/head";
 import {useEffect, useState} from "react";
-import {useWindowSize} from "@/hooks/useWindowSize";
 
 export default function App({Component, pageProps, router}: AppProps) {
     const [isLoaded, setLoaded] = useState(false);
-    const [initialHeight, setHeight] = useState(0)
-    const [,windowHeight] = useWindowSize()
 
     useEffect(()=>{
         setLoaded(true)
-        setHeight(document.documentElement.offsetHeight)
     }, [])
 
     return (
@@ -25,7 +21,7 @@ export default function App({Component, pageProps, router}: AppProps) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
-            <main style={{height: windowHeight === 0 ? initialHeight : windowHeight, overflowY: "scroll" }}>
+            <main>
                 <AnimatePresence
                     mode="wait"
                     initial={true}
