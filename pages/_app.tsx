@@ -24,7 +24,7 @@ export default function App({Component, pageProps, router}: AppProps) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
-            <main style={{height: windowHeight}}>
+            <main style={{height: windowHeight, overflowY: "scroll"}}>
                 <AnimatePresence
                     mode="wait"
                     initial={true}
