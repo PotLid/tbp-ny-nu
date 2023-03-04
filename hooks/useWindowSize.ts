@@ -8,7 +8,8 @@ export function useWindowSize(): WindowSize {
 
     isomorphicEffect(()=>{
         function updateSize() {
-            setSize([window.innerWidth, window.innerHeight])
+            // setSize([window.innerWidth, window.innerHeight])
+            setSize([window.innerWidth, document.documentElement.offsetHeight])
         }
         window.addEventListener('resize', updateSize)
         return () => window.removeEventListener('resize', updateSize)

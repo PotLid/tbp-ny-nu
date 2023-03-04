@@ -17,7 +17,7 @@ export default function App({Component, pageProps, router}: AppProps) {
 
     useEffect(()=>{
         setLoaded(true)
-        setHeight(window.innerHeight)
+        setHeight(document.documentElement.offsetHeight)
     }, [])
 
     return (
