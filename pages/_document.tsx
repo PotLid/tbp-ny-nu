@@ -5,13 +5,14 @@ export default function RootDocument() {
         title: 'Tau Beta Pi - New York Nu Chapter',
         description: 'Tau Beta Pi - New York Nu Chapter Website.',
         image: 'https://www.buffalo.edu/content/www/brand/identity/university-logo-and-marks/jcr:content/par/image_0.img.219.auto.png/1459284839259.png',
-        keywords: ''
     }
+
+    // const screenFill: string = "min-h-full flex flex-col grow"
 
     return (
         <Html
             lang="en"
-            className="text-white bg-black min-h-full flex flex-col grow"
+            className="text-white bg-black"
         >
             <Head>
                 <meta name="robots" content="follow, index"/>
