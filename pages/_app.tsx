@@ -11,20 +11,21 @@ import {useEffect, useState} from "react";
 import {useWindowSize} from "@/hooks/useWindowSize";
 
 export default function App({Component, pageProps, router}: AppProps) {
-    const [,windowHeight] = useWindowSize()
     const [isLoaded, setLoaded] = useState(false);
+    const [initialHeight, setHeight] = useState(0)
+    const [,windowHeight] = useWindowSize()
 
     useEffect(()=>{
-        setLoaded(true);
+        setLoaded(true)
+        setHeight(window.innerHeight)
     }, [])
-
 
     return (
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
-            <main style={{height: windowHeight, overflowY: "scroll"}}>
+            <main style={{height: windowHeight === 0 ? initialHeight : windowHeight, overflowY: "scroll" }}>
                 <AnimatePresence
                     mode="wait"
                     initial={true}

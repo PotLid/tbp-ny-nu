@@ -3,7 +3,7 @@ import {WindowSize} from "@/hooks/types";
 import {useIsomorphicEffect} from "@/hooks/useIsomorphicEffect";
 
 export function useWindowSize(): WindowSize {
-    const [size, setSize] = useState<WindowSize>([0,0])
+    const [size, setSize] =  useState<WindowSize>([0, 0])
     const isomorphicEffect = useIsomorphicEffect()
 
     isomorphicEffect(()=>{
@@ -13,5 +13,6 @@ export function useWindowSize(): WindowSize {
         window.addEventListener('resize', updateSize)
         return () => window.removeEventListener('resize', updateSize)
     }, []);
+
     return size
 }
