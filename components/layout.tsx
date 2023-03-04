@@ -1,6 +1,7 @@
 import Head from "next/head";
 import {motion} from 'framer-motion'
 import {title as metaTitle} from "@/lib/info";
+import {useWindowSize} from "@/hooks/useWindowSize";
 
 function Frame({children, className}:{children: React.ReactNode | null, className?: string}){
     return (
@@ -35,12 +36,15 @@ export function SubLayout({children, title, className}: {children: React.ReactNo
 }
 
 export function MainLayout({children, title, className}: {children: React.ReactNode, title?: string, className?: string}) {
+    const [, windowHeight] = useWindowSize()
+
     return (
         <>
             <Head>
                 <title>{title ? `${metaTitle} | ${title}` : metaTitle}</title>
             </Head>
             <motion.div
+                style={{height: windowHeight}}
                 className={className}
                 initial={{ filter: "blur(.1rem)",transform: "scale(.95)", opacity: 0 }}
                 animate={{ filter: "blur(0)", transform: "scale(1)", opacity: 1 }}
