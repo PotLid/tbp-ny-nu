@@ -1,9 +1,12 @@
 import {useLayoutEffect, useState} from "react";
 import {WindowSize} from "@/hooks/types";
+import {useIsomorphicEffect} from "@/hooks/useIsomorphicEffect";
 
 export function useWindowSize(): WindowSize {
     const [size, setSize] = useState<WindowSize>([0,0])
-    useLayoutEffect(()=>{
+    const isomorphicEffect = useIsomorphicEffect()
+
+    isomorphicEffect(()=>{
         function updateSize() {
             setSize([window.innerWidth, window.innerHeight])
         }

@@ -8,8 +8,10 @@ import {AnimatePresence} from "framer-motion";
 import {Background} from "@/components/Background";
 import Head from "next/head";
 import {useEffect, useState} from "react";
+import {useWindowSize} from "@/hooks/useWindowSize";
 
 export default function App({Component, pageProps, router}: AppProps) {
+    const [,windowHeight] = useWindowSize()
     const [isLoaded, setLoaded] = useState(false);
 
     useEffect(()=>{
@@ -22,7 +24,7 @@ export default function App({Component, pageProps, router}: AppProps) {
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
             </Head>
-            <main>
+            <main style={{height: windowHeight}}>
                 <AnimatePresence
                     mode="wait"
                     initial={true}
