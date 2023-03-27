@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TBP NY-Nu
+
+## About This Project
+
+Core - [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+
+Language - [TypeScript](https://www.typescriptlang.org/)
+
+Styling - [Tailwindcss](https://tailwindcss.com/)
+
+Dependencies - Refer to package.json
 
 ## Getting Started
 
