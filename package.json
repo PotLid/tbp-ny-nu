@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:watch": "chokidar \"**/*.{ts,tsx,js,jsx}\" -i \"node_modules|.next\" -c \"eslint --fix {path}\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.3.1",
@@ -27,6 +29,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
+    "chokidar-cli": "^3.0.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^4.3.3"
   },
