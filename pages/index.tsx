@@ -11,11 +11,11 @@ export default function Home( {isLoaded} : {isLoaded?: boolean} ) {
     return (
         <MainLayout className="relative z-10">
             <header className="relative flex flex-col items-center max-w-full text-center landing-gradient" style={{backgroundImage: "radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%)"}}>
-                <div className="w-[5.5rem] h-[5.5rem] p-2.5 leading-[5.5rem] border-2 border-white rounded-full">
+                <div className="w-22 h-22 p-2.5 leading-22 border-2 border-white rounded-full">
                     <Image className="p-1.5 border border-white rounded-full" src={tbpLogo} alt="Tau Beta Pi Logo" />
                 </div>
                 <div className="max-w-full border-solid border-white border-y landing-line-vertical">
-                    <div className={`px-12 py-8 max-h-[40rem] overflow-hidden landing-inner ${isLoaded ? "" : "landing-inner-init"}`}>
+                    <div className={`px-12 py-8 max-h-160 overflow-hidden landing-inner ${isLoaded ? "" : "landing-inner-init"}`}>
                         <h1 className="landing-header">
                             TBP NY Nu
                         </h1>

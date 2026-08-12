@@ -22,7 +22,7 @@ export function SubLayout({children, title, className}: {children: React.ReactNo
                 animate={{ transform: "translateY(0)", opacity: 1 }}
                 exit={{ transform: "translateY(.75rem)", opacity: 0 }}
                 transition={{
-                    type: "ease-in-out",
+                    ease: "easeInOut",
                     duration: .325,
                 }}
             >
@@ -46,7 +46,7 @@ export function MainLayout({children, title, className}: {children: React.ReactN
                 animate={{ filter: "blur(0)", transform: "scale(1)", opacity: 1 }}
                 exit={{ filter: "blur(.1rem)",transform: "scale(.95)", opacity: 0 }}
                 transition={{
-                    type: "ease-in-out",
+                    ease: "easeInOut",
                     duration: .325,
                 }}
             >

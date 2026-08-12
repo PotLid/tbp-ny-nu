@@ -1,306 +1,313 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility custom-anchor {
+  border-bottom: dotted 2px rgba(255, 255, 255, 0.5);
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+@utility landing-line-vertical {
+  position: relative;
+  margin-top: 3.5rem;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(-3.5rem - 1px);
+    left: calc(50% - 1px);
+    width: 1px;
+    height: calc(3.5rem + 1px);
+    background: #fff;
+  }
+
+  @media only screen and (max-width: 736px) {
+    margin-top: 2rem;
+
+    &:before {
+      top: calc(-2rem - 1px);
+      height: calc(2rem + 1px);
+    }
+  }
+}
+
+@utility landing-inner {
+  transition:
+    max-height 0.75s ease,
+    padding 0.75s ease,
+    opacity 0.325s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+@utility landing-inner-init {
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@utility landing-header {
+  font-size: 2.25rem;
+  line-height: 1.3;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 736px) {
+    font-size: 1.75rem;
+    line-height: 1.4;
+  }
+}
+
+@utility landing-desc {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  line-height: 2;
+
+  @media only screen and (max-width: 736px) {
+    line-height: 1.875;
+  }
+}
+
+@utility layout-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  max-width: 100%;
+}
+
+@utility layout-article {
+  padding: 4.5rem 2.5rem 1.5rem 2.5rem;
+  position: relative;
+  width: 40rem;
+  max-width: 100%;
+  background-color: rgba(27, 31, 34, 0.85);
+  border-radius: 4px;
+
+  @media only screen and (max-width: 736px) {
+    padding: 3.5rem 2rem 0.5rem 2rem;
+  }
+
+  @media only screen and (max-width: 480px) {
+    padding: 3rem 1.5rem 0.5rem 1.5rem;
+  }
+}
+
+@utility major {
+  border-bottom: solid 1px #fff;
+  width: -moz-max-content;
+  width: max-content;
+  padding-bottom: 0.5rem;
+  margin: 0 0 2rem 0;
+
+  @media only screen and (max-width: 736px) {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+}
+
+@utility major-sub {
+  border-bottom: solid 1px #fff;
+  width: -moz-max-content;
+  width: max-content;
+  padding-bottom: 0.35rem;
+  margin: 0 0 1.5rem 0;
+
+  @media only screen and (max-width: 736px) {
+    font-size: 1.25em;
+    line-height: 1.5;
+    padding-bottom: 0.2rem;
+  }
+}
+
+@utility heading-article {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 736px) {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+}
+
+@utility sub-heading-article {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.25rem;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+
+  @media only screen and (max-width: 736px) {
+    font-size: 1em;
+    line-height: 1.3;
+  }
+}
+
+@utility image-article-wrap {
+  display: block;
+  margin: 2.5rem 0;
+  width: 100%;
+  border: 0;
+  position: relative;
+
+  @media only screen and (max-width: 736px) {
+    margin: 2rem 0;
+  }
+
+  @media only screen and (max-width: 480px) {
+    margin: 1.5rem 0;
+  }
+}
+
+@utility image-article {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+@utility icons {
+  cursor: default;
+  list-style: none;
+  margin: 0 0 2rem 0;
+}
+
+@utility icons-list-first {
+  padding-right: 0;
+}
+
+@utility icons-list {
+  display: inline-block;
+  padding: 0 0.75em 0 0;
+}
+
+@utility icons-anchor {
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.25rem;
+  width: 2.25rem;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+}
+
+@utility landing-nav-ul {
+  /* Bug on Production if use module.css */
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  border: solid 1px #fff;
+  border-radius: 4px;
+
+  @media only screen and (max-width: 480px) {
+    /* Bug on production if use module.css */
+    flex-direction: column;
+    min-width: 10rem;
+    max-width: 100%;
+  }
+}
+
+@utility landing-nav-li {
+  border-left-width: 1px;
+  border-color: white;
+
+  @media only screen and (max-width: 480px) {
+    border-left: 0;
+    border-top: solid 1px #fff;
+  }
+}
+
+@utility landing-nav-link {
+  display: block;
+  min-width: 7.5rem;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  padding: 0 1.25rem 0 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-bottom-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+
+  @media only screen and (max-width: 480px) {
+    height: 3rem;
+    line-height: 3rem;
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@utility landing-gradient {
+  @media only screen and (max-width: 480px) {
+    background-position-y: -2.5rem;
+  }
+}
 
 @layer utilities {
-    .custom-anchor {
-        border-bottom: dotted 2px rgba(255, 255, 255, 0.5);
-        transition: color .2s ease-in-out, background-color .2s ease-in-out, border-bottom-color .2s ease-in-out;
-    }
-
-    .custom-anchor:hover {
-        border-color: transparent;
-    }
-
-    .landing-line-vertical {
-        position: relative;
-        margin-top: 3.5rem;
-    }
-
-    .landing-line-vertical:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: calc(-3.5rem - 1px);
-        left: calc(50% - 1px);
-        width: 1px;
-        height: calc(3.5rem + 1px);
-        background: #fff;
-    }
-
-    .landing-inner {
-        transition: max-height .75s ease,padding .75s ease,opacity .325s ease-in-out;
-        transition-delay: 0.25s;
-    }
-
-    .landing-inner-init {
-        opacity: 0;
-        max-height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-
-    .landing-header {
-        font-size: 2.25rem;
-        line-height: 1.3;
-        letter-spacing: .5rem;
-        color: #fff;
-        font-weight: 600;
-        margin: 0 0 1rem 0;
-        text-transform: uppercase;
-    }
-
-    .landing-desc {
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        font-size: 0.8rem;
-        line-height: 2;
-    }
-
-    .layout-section {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        max-width: 100%;
-    }
-
-    .layout-article {
-        padding: 4.5rem 2.5rem 1.5rem 2.5rem;
-        position: relative;
-        width: 40rem;
-        max-width: 100%;
-        background-color: rgba(27,31,34,0.85);
-        border-radius: 4px;
-    }
-
-    .major {
-        border-bottom: solid 1px #fff;
-        width: -moz-max-content;
-        width: max-content;
-        padding-bottom: 0.5rem;
-        margin: 0 0 2rem 0;
-    }
-
-    .major-sub {
-        border-bottom: solid 1px #fff;
-        width: -moz-max-content;
-        width: max-content;
-        padding-bottom: 0.35rem;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .heading-article {
-        font-size: 1.5rem;
-        line-height: 1.4;
-        letter-spacing: .5rem;
-        color: #fff;
-        font-weight: 600;
-        margin: 0 0 1rem 0;
-        text-transform: uppercase;
-    }
-
-    .sub-heading-article {
-        font-size: 1.25rem;
-        line-height: 1.2;
-        letter-spacing: .25rem;
-        color: #fff;
-        font-weight: 600;
-        margin: 0 0 .25rem 0;
-    }
-
     .p-article {
 
     }
 
-    .image-article-wrap {
-        display: block;
-        margin: 2.5rem 0;
-        width: 100%;
-        border: 0;
-        position: relative;
-    }
-
-    .image-article {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-    }
-
-    .icons {
-        cursor: default;
-        list-style: none;
-        margin: 0 0 2rem 0;
-    }
-
-    .icons-list-first{
-        padding-right: 0;
-    }
-
-    .icons-list {
-        display: inline-block;
-        padding: 0 0.75em 0 0;
-    }
-
-    .icons-anchor {
-        transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
-        border-radius: 100%;
-        box-shadow: inset 0 0 0 1px white;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        height: 2.25rem;
-        width: 2.25rem;
-    }
-
-    .icons-anchor:hover {
-     background-color: rgba(255,255,255,0.075)
-    }
-
-    /* Bug on Production if use module.css */
-    .landing-nav-ul {
-        display: flex;
-        margin-bottom: 0;
-        list-style: none;
-        padding-left: 0;
-        border: solid 1px #fff;
-        border-radius: 4px;
-    }
-
-    .landing-nav-li {
-        border-left-width: 1px;
-        border-color: white;
-    }
-
-    .landing-nav-link {
-        display: block;
-        min-width: 7.5rem;
-        height: 2.75rem;
-        line-height: 2.75rem;
-        padding: 0 1.25rem 0 1.25rem;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        font-size: 0.8rem;
-        transition: color .2s ease-in-out,background-color .2s ease-in-out,border-bottom-color .2s ease-in-out;
-    }
-
-    .landing-nav-link:hover {
-        background-color: rgba(255,255,255,0.075);
-    }
-
     @media only screen and (max-width: 736px) {
-        .landing-line-vertical {
-            margin-top: 2rem;
-        }
-
-        .landing-line-vertical:before {
-            top: calc(-2rem - 1px);
-            height: calc(2rem + 1px);
-        }
-
-
-        .landing-header {
-            font-size: 1.75rem;
-            line-height: 1.4;
-        }
-
-        .landing-desc {
-            line-height: 1.875;
-        }
-
-        .layout-article {
-            padding: 3.5rem 2rem .5rem 2rem;
-        }
-
-        .major {
-            font-size: 1.25em;
-            line-height: 1.5;
-        }
-
-        .major-sub {
-            font-size: 1.25em;
-            line-height: 1.5;
-            padding-bottom: 0.2rem;
-        }
-
-        .heading-article {
-            font-size: 1.25em;
-            line-height: 1.5;
-        }
-
-        .sub-heading-article {
-            font-size: 1em;
-            line-height: 1.3;
-        }
 
         .p-article {
-
-        }
-
-        .image-article-wrap {
-            margin: 2rem 0;
-        }
-
-        .image-article {
 
         }
     }
 
     @media only screen and (max-width: 480px) {
-        .landing-gradient {
-            background-position-y: -2.5rem;
-        }
-
-        .layout-article {
-            padding: 3rem 1.5rem .5rem 1.5rem;
-        }
-
-        .major {
-
-        }
-
-
-        .landing-header {
-
-        }
-
-        .landing-desc {
-
-        }
-
-        .heading-article {
-
-        }
 
         .p-article {
 
-        }
-
-        .image-article-wrap {
-            margin: 1.5rem 0;
-        }
-
-        .image-article {
-
-        }
-        /* Bug on production if use module.css */
-        .landing-nav-ul {
-            flex-direction: column;
-            min-width: 10rem;
-            max-width: 100%;
-        }
-
-        .landing-nav-li {
-            border-left: 0;
-            border-top: solid 1px #fff;
-        }
-
-        .landing-nav-link {
-            height: 3rem;
-            line-height: 3rem;
-            min-width: 0;
-            width: 100%;
         }
     }
 

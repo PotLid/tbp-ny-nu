@@ -13,6 +13,7 @@ export default function App({Component, pageProps, router}: AppProps) {
     const [isLoaded, setLoaded] = useState(false);
 
     useEffect(()=>{
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional mount flag to trigger the enter transition after first paint
         setLoaded(true)
     }, [])
 

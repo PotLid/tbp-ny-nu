@@ -8,7 +8,7 @@ export const Background: BackgroundComponent = ({isMain, className, isLoaded}) =
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-                type: "ease-in-out",
+                ease: "easeInOut",
                 duration: .325,
                 delay: .625
             }}
