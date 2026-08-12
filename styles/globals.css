@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
@@ -35,7 +35,7 @@
   margin-top: 3.5rem;
 
   &:before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: calc(-3.5rem - 1px);
@@ -210,9 +210,10 @@
   display: inline-block;
   padding: 0 0.75em 0 0;
 
-  &:first-child {
+  /* Not needed */
+  /* &:first-child {
     padding-right: 0;
-  }
+  } */
 }
 
 @utility icons-anchor {
@@ -293,45 +294,42 @@
 }
 
 @layer utilities {
+  .p-article {
+  }
+
+  @media only screen and (max-width: 736px) {
     .p-article {
-
     }
+  }
 
-    @media only screen and (max-width: 736px) {
-
-        .p-article {
-
-        }
+  @media only screen and (max-width: 480px) {
+    .p-article {
     }
-
-    @media only screen and (max-width: 480px) {
-
-        .p-article {
-
-        }
-    }
-
+  }
 }
 
-html, body {
-    min-width: 320px;
+html,
+body {
+  min-width: 320px;
 }
 
-body, input, select, textarea {
-    color: #fff;
-    font-family: "Source Sans Pro",sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.65;
+body,
+input,
+select,
+textarea {
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-
 @media only screen and (max-width: 736px) {
-    html {
-        font-size: 11px;
-    }
+  html {
+    font-size: 11px;
+  }
 }
