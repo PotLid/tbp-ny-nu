@@ -63,7 +63,13 @@
   transition-delay: 0.25s;
 }
 
-@utility landing-inner-init {
+/*
+  Deliberately unlayered (not @utility/@layer): this needs to override
+  Tailwind utilities (max-h-*, py-*) applied on the same element, and
+  unlayered CSS always wins over layered CSS regardless of source
+  order or specificity.
+*/
+.landing-inner-init {
   opacity: 0;
   max-height: 0;
   padding-top: 0;
