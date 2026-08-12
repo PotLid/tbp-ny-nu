@@ -1,7 +1,7 @@
 import { SubLayout } from "@/components/layout";
 import Close from "@/components/Close";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {

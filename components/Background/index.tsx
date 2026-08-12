@@ -2,7 +2,7 @@ import {BackgroundComponent} from "./types";
 import {motion} from "framer-motion";
 import styles from "./styles.module.css";
 
-export const Background: BackgroundComponent = ({isMain, className, isLoaded}) => {
+export const Background: BackgroundComponent = ({isMain}) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}

@@ -3,7 +3,7 @@ import Close from "@/components/Close";
 
 export default function Custom404({}) {
     return(
-        <SubLayout title="Chapter" className="relative z-10">
+        <SubLayout title="Not Found" className="relative z-10">
             <section className="layout-section">
                 <article className="layout-article">
                     <h2 className="major heading-article">404 | Not Found</h2>

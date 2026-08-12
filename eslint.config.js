@@ -5,4 +5,9 @@ module.exports = [
   {
     ignores: [".next/**", "node_modules/**"],
   },
+  {
+    rules: {
+      "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    },
+  },
 ];

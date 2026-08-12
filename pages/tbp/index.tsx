@@ -20,7 +20,7 @@ export default function TBP() {
             <Image
               className="image-article"
               src={samplePic}
-              alt=""
+              alt="Davis Hall, home of the UB School of Engineering and Applied Sciences, lit up at dusk"
               placeholder="blur"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />

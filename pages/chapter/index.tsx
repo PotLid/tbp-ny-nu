@@ -14,7 +14,7 @@ export default function Chapter() {
             <Image
               className="image-article"
               src={samplePic}
-              alt=""
+              alt="Group photo of Tau Beta Pi New York Nu chapter members"
               placeholder="blur"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
