@@ -24,33 +24,51 @@ export default function About() {
                     <h2 className="major heading-article">E-Board Members</h2>
                     <Profile
                         title="President"
-                        name="Maxine Dupuis"
-                        major="Biomedical Engineering"
-                        linkedIn="https://www.linkedin.com/in/maxine-dupuis/"
+                        name="William Lagraves"
+                        major="Aerospace Engineering"
+                        linkedIn="https://www.linkedin.com/in/william-lagraves/"
                     />
                     <Profile
                         title="Vice President"
-                        name="Arthur Tanchoco Jr."
-                        major="Aerospace and Mechanical Engineering"
-                        linkedIn="https://www.linkedin.com/in/arthur-tanchoco-jr-078697202/"
+                        name="Eston Haase-Smith"
+                        major="Mechanical Engineering and Mathematics"
+                        linkedIn="https://www.linkedin.com/in/estonhaase-smith/"
                     />
                     <Profile
                         title="Treasurer"
-                        name="Alexis Tensfeldt"
-                        major="Biomedical Engineering"
-                        linkedIn="https://www.linkedin.com/in/alexis-tensfeldt/"
+                        name="Sarah Kassal"
+                        major="Aerospace Engineering"
+                        linkedIn="https://www.linkedin.com/in/sara-kassal-a9b689330/"
                     />
                     <Profile
                         title="Corresponding Secretary"
-                        name="Junwoo Park"
-                        major="Computer Science"
-                        linkedIn="https://www.linkedin.com/in/junwoodev/"
+                        name="D.Jai Pawlowski"
+                        major="Aerospace Engineering"
+                        linkedIn=""
                     />
                     <Profile
-                        title="Recording Secretary"
-                        name="Lolina Schietekat Sedas"
-                        major="Industrial Engineering"
-                        linkedIn="https://www.linkedin.com/in/lolinasc/"
+                        title="Webmaster"
+                        name="Daniel Keselman"
+                        major="Computer Science"
+                        linkedIn="https://www.linkedin.com/in/danielkeselman1/"
+                    />
+                    <Profile
+                        title="Social Media Chair"
+                        name="Emma Ressman"
+                        major="Computer Science and Mathematics"
+                        linkedIn="http://linkedin.com/in/e-ressman/"
+                    />
+                    <Profile
+                        title="Community Outreach Committee Head"
+                        name="Cassidy Shafer"
+                        major="Chemical Engineering"
+                        linkedIn="https://www.linkedin.com/in/cassidyshafer/"
+                    />
+                    <Profile
+                        title="Proffessional Development Committee Head"
+                        name="Kate Gilbert"
+                        major="Mechanical Engineering"
+                        linkedIn="https://www.linkedin.com/in/kate-gilbert27/"
                     />
                 </article>
                 <Close />
